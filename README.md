@@ -1,2 +1,3 @@
-# go-proxymaster
-Test project for multi channel asynchronous CURL requests with proxies list
+# Golang-proxymaster
+
+Test project for multichannel asynchronous CURL requests with proxies list...

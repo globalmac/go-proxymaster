@@ -27,7 +27,7 @@ func asyncHttpGets(urls []string) []*HttpResponse {
 	ch := make(chan *HttpResponse)
 	responses := make([]*HttpResponse, 0)
 
-    	// Proxy like - "//1.1.1.1:2222"
+	// Proxy like - "//1.1.1.1:2222"
 	proxies := []string{
 		"//PROXY_URL:PROXY_PORT",
 		"//PROXY_URL:PROXY_PORT",
@@ -36,10 +36,10 @@ func asyncHttpGets(urls []string) []*HttpResponse {
 
 	for _, ul := range urls {
 
-	    	// For tests
-        	//time.Sleep(200 * time.Millisecond)
-
-        	// Make some random proxy for URL
+		// For tests
+		//time.Sleep(200 * time.Millisecond)
+		
+		// Make some random proxy for URL
 		rand.Seed(time.Now().UnixNano())
 		randURL := proxies[rand.Intn(len(proxies)-1)]
 		proxyUrl, err := url.Parse(randURL)
